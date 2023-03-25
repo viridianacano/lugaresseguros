@@ -12,10 +12,12 @@ const db={};
 let sequelize;
 
 sequelize=new Sequelize(
-  config.database,
-  config.username,
-  config.password,
-  config
+  config.NAME,
+  config.USER,
+  config.PASSWORD,
+  config.HOST,
+  config.DIALECT,
+  "postgres"
 );
 
 if (config.use_env_variable) {
